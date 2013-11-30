@@ -1,0 +1,11 @@
+<ol>
+  <% for(var i = 0; i < items.length; i++) {%>
+    <li>
+      <h3><%= items[i].title %></h3>
+      <img src="<%= items[i].imageLink %>">
+      <p>Source: <a href="<%= items[i].sourceLink %>"><%= items[i].sourceName %></a>
+      </p>
+      <p><%= items[i].text %></p>
+    </li>
+  <% } %>
+</ol>

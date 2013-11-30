@@ -1,0 +1,7 @@
+<input type="text" id="headline">
+<button id="make-article" href="">Make article</a>
+<script>
+  document.getElementById('make-article').onclick = function() {
+    window.location.replace("/article?headline=" + encodeURI(document.getElementById('headline').value));
+  }
+</script>
