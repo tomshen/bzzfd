@@ -7,9 +7,9 @@
       <p>
         <a href="<%= items[i].imageLink %>"><img src="<%= items[i].imageLink %>"></a>
         <br>
-        <a href="<%= items[i].sourceLink %>"><%= items[i].sourceName %></a>
+        <a class="image-source" href="<%= items[i].sourceLink %>"><%= items[i].sourceName %></a>
       </p>
-      <p><%= items[i].text %></p>
+      <p><a class="author" href="<%= items[i].textLink %>"><%= items[i].author %></a> <%= items[i].text %></p>
     </li>
   <% } %>
 </ol>

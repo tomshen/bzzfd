@@ -13,18 +13,6 @@ html {
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-  #container {
-    width: 60%;
-  }
-}
-
-@media (max-width: 800px) {
-  #container {
-    width: 90%;
-  }
-}
-
 header, h1, h2, h3, h4, h5, h6, ol {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -34,9 +22,16 @@ header h1 {
   font-size: 5.4rem;
   font-weight: bold;
   color: #E21;
+  border-bottom: thick dotted #E21;
+  margin-bottom: 1rem;
+}
+
+header a:hover {
+  text-decoration: none;
 }
 
 h2 {
+  margin-top: 1rem;
   font-size: 3.6rem;
   color: #333;
 }
@@ -74,7 +69,7 @@ footer {
   font-size: 1.6rem;
   text-align: center;
 
-  border-top: thick dotted #ff0000;
+  border-top: thick dotted #E21;
   padding: 2rem;
 }
 
@@ -82,12 +77,39 @@ footer {
   text-align: center;
 }
 
-.item a, .item a:visited {
+.item {
+  font-weight: normal;
+}
+
+.item .image-source, .item .image-source:visited {
   font-size: 1.2rem;
   font-style: italic;
   color: #999;
 }
 
 .item img {
+  width: 300px;
+}
+
+.item .author {
+  font-size: 1.6rem;
+  color: #999;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  #container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  #container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .item img {
   width: 100%;
 }
