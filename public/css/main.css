@@ -4,11 +4,25 @@
 html {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 10px;
+
+  box-sizing: border-box;
 }
 
 #container {
   width: 50%;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  #container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  #container {
+    width: 90%;
+  }
 }
 
 header, h1, h2, h3, h4, h5, h6, ol {
@@ -33,19 +47,27 @@ h3, ol {
 }
 
 a {
-  font-color: #E21;
+  color: #E21;
   font-weight: normal;
   text-decoration: none;
 }
 
-.item a {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #999;
+a:hover {
+  text-decoration: underline;
 }
 
-.item img {
+a:visited {
+  color: inherited;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+input[type=text] {
+  font-size: 1.6rem;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -54,4 +76,18 @@ footer {
 
   border-top: thick dotted #ff0000;
   padding: 2rem;
+}
+
+#headline-entry {
+  text-align: center;
+}
+
+.item a, .item a:visited {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #999;
+}
+
+.item img {
+  width: 100%;
 }

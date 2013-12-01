@@ -1,14 +1,21 @@
 <% include head %>
-<h2>BuzzFeed article generator</h2>
+<h2>BuzzFeed Article Generator</h2>
 <p>Type in a headline for your BuzzFeed article (or generate one with
 <a href="http://www.buzzfeed.com/scott/the-buzzfeed-headline-generator">
-BuzzFeed's own headline generator</a>), and click the button to create your
-very own BuzzFeed article</p>
-<input type="text" id="headline" placeholder="Headline">
-<button id="make-article" href="">Make article</a>
+BuzzFeed's own headline generator</a>) and click the button to create your
+very own BuzzFeed article.</p>
+<p id="headline-entry">
+  <input type="text" id="headline" placeholder="Headline" size=80>
+  <button id="make-article" href="">Make article</button>
+</p>
 <script>
-  document.getElementById('make-article').onclick = function() {
-    window.location = "/article?headline=" + encodeURI(document.getElementById('headline').value);
+  function makeArticle(e) {
+    var headline = document.getElementById('headline').value;
+    if (headline && (e instanceof MouseEvent || e.keyCode == 13))
+      window.location = "/article?headline=" + encodeURI(headline);
   }
+
+  document.getElementById('make-article').onclick = makeArticle;
+  window.onkeypress = makeArticle;
 </script>
 <% include foot %>
