@@ -83,7 +83,7 @@ function getItems(query, numItems, callback) {
                 && tok.indexOf('http') === -1
                 && tok.indexOf('@') === -1;
           }).join(' '),
-          textLink: status.user.screen_name ? 'https://twitter.com/' + status.user.screen_name : ''
+          textLink: status.user.screen_name ? 'https://twitter.com/' + status.user.screen_name : '#'
         };
       });
       callback(null, items);
