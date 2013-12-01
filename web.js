@@ -23,6 +23,7 @@ app.get('/article', function (req, res) {
   var headline = req.query.headline;
   bzzfd.makeArticle(headline, function (err, items) {
     res.render('article', {
+      headline: headline,
       items: items
     });
   });

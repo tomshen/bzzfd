@@ -1,7 +1,14 @@
-<input type="text" id="headline">
+<% include head %>
+<h2>BuzzFeed article generator</h2>
+<p>Type in a headline for your BuzzFeed article (or generate one with
+<a href="http://www.buzzfeed.com/scott/the-buzzfeed-headline-generator">
+BuzzFeed's own headline generator</a>), and click the button to create your
+very own BuzzFeed article</p>
+<input type="text" id="headline" placeholder="Headline">
 <button id="make-article" href="">Make article</a>
 <script>
   document.getElementById('make-article').onclick = function() {
-    window.location.replace("/article?headline=" + encodeURI(document.getElementById('headline').value));
+    window.location = "/article?headline=" + encodeURI(document.getElementById('headline').value);
   }
 </script>
+<% include foot %>

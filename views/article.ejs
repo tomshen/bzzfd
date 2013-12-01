@@ -1,11 +1,16 @@
-<ol>
+<% include head %>
+<h2><%= headline %></h2>
+<ol class="items">
   <% for(var i = 0; i < items.length; i++) {%>
-    <li>
+    <li class="item">
       <h3><%= items[i].title %></h3>
-      <img src="<%= items[i].imageLink %>">
-      <p>Source: <a href="<%= items[i].sourceLink %>"><%= items[i].sourceName %></a>
+      <p>
+        <a href="<%= items[i].imageLink %>"><img src="<%= items[i].imageLink %>"></a>
+        <br>
+        <a href="<%= items[i].sourceLink %>"><%= items[i].sourceName %></a>
       </p>
       <p><%= items[i].text %></p>
     </li>
   <% } %>
 </ol>
+<% include foot %>
