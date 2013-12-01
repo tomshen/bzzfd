@@ -1,5 +1,4 @@
-var request = require('request')
-  , _ = require('lodash')
+var _ = require('lodash')
   , Twitter = require('twitter-js-client').Twitter;
 
 var twitter = new Twitter({
